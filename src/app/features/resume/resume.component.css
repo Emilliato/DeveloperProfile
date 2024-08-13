@@ -1,0 +1,198 @@
+.custom-horizontal-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.custom-horizontal-flex-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.e-marambo-resume-right-column {
+    flex-basis: 100%;
+}
+
+.e-marambo-divider {
+    width: 100%;
+    border: 2px solid var(--white);
+}
+
+.e-marambo-section-title {
+    color: var(--dark-blue);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.e-marambo-section-sub-title {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.e-marambo-skill {
+    border: 2px solid var(--secondary-orange);
+    width: 90%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-block: 0.5rem;
+}
+
+.e-marambo-personal-details {
+    border: 2px solid var(--dark-blue);
+    padding: 0.5rem;
+    flex-basis: 55%;
+    border-radius: 1rem;
+    margin-block: 0.5rem;
+}
+
+.e-marambo-personal-details-right {
+    border: 2px solid var(--dark-blue);
+    flex-basis: 45%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-block: 0.5rem;
+}
+
+.e-marambo-section-skill {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.e-marambo-personal-details-title {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.e-marambo-personal-details-desc {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+
+/* Right section */
+
+.container {
+    margin: 0 auto;
+    background: var(--background-color);
+    padding: 2% 6.5%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.name h1 {
+    font-size: 32px;
+    color: var(--dark-blue);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.name p {
+    font-size: 14px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.contact-info {
+    text-align: right;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.contact-info .icon {
+    color: var(--dark-blue);
+    margin-right: 8px;
+}
+
+.work-experience {
+    margin-top: 40px;
+}
+
+.e-marambo-section-title {
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.work-experience h2 {
+    font-size: 24px;
+    border-bottom: 2px solid var(--dark-blue);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.job {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.company {
+    flex: 1;
+    padding-right: 20px;
+    border-right: 2px solid var(--dark-blue);
+}
+
+.role {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.e-marambo-reference-title,
+.company h3 {
+    font-size: 18px;
+    color: var(--dark-blue);
+    margin: 0;
+}
+
+.e-marambo-reference-contact {
+    font-size: 14px;
+    color: var(--dark-blue) !important;
+    margin: 0;
+}
+
+.e-marambo-reference {
+    flex-basis: 48%;
+}
+
+.e-marambo-reference-position {
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.date {
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
+}
+
+.role h4 {
+    font-size: 18px;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    line-height: 1.5em;
+}
+
+.m-top-3 {
+    margin-top: 5rem;
+}

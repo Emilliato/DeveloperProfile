@@ -1,1 +1,92 @@
-/* You can add global styles to this file, and also import other style files */
+/* Base Colors */
+
+:root {
+    --primary-blue: #007BFF;
+    --secondary-orange: #FFA500;
+    --dark-blue: #0c427c;
+    --light-blue: #e7f1ff;
+    --light-orange: #ffe5b4;
+    /* Light Orange */
+    --dark-orange: #cc8400;
+    /* Darker Orange */
+    --background-color: #f8f9fa;
+    /* Light Grey Background */
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+body {
+    color: var(--text-color);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.e-marambo-main-container {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-blue);
+}
+
+.e-marambo-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.e-marambo-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--light-orange);
+}
+
+.e-marambo-hero-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--dark-orange);
+}
+
+.e-marambo-actions {
+    display: inline-block;
+    margin-inline-end: 1rem;
+    color: var(--light-blue);
+    padding: 12px 30px;
+    line-height: 1.1;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid var(--text-color);
+    text-transform: uppercase;
+    background: linear-gradient(to left, var(--dark-blue) 10%, var(--secondary-orange) 100%);
+    transition: all 0.55s ease;
+    align-self: flex-start;
+}
+
+.e-marambo-actions:hover {
+    background: transparent;
+    border: 1px solid var(--light-blue);
+    transform: translate(10px);
+    text-decoration: none;
+}
+
+.e-marambo-flex-container {
+    display: flex;
+    flex-direction: column;
+}

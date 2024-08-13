@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mysite';
+  
+  constructor(private router: Router) {}
+
+  viewResume() {
+    this.router.navigate(['/resume']);  // Replace '/resume' with your actual route
+  }
+
+  downloadResume() {
+    // Your existing download logic here
+  }
 }
