@@ -1,92 +1,210 @@
-/* Base Colors */
-
 :root {
     --primary-blue: #007BFF;
     --secondary-orange: #FFA500;
     --dark-blue: #0c427c;
     --light-blue: #e7f1ff;
     --light-orange: #ffe5b4;
-    /* Light Orange */
     --dark-orange: #cc8400;
-    /* Darker Orange */
     --background-color: #f8f9fa;
-    /* Light Grey Background */
     --text-color: #333;
     --white: #ffffff;
 }
 
 body {
     color: var(--text-color);
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-family: "Lato", sans-serif;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .e-marambo-main-container {
-    width: 100dvw;
-    height: 100dvh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--dark-blue);
+    position: relative;
 }
 
 .e-marambo-hero-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
+    text-align: center;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    animation: containerFadeIn 1.5s ease-in forwards;
 }
 
 .e-marambo-hero-title {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 800;
     color: var(--light-orange);
+    margin-bottom: 1rem;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: titleSlideIn 1.5s ease-in-out forwards;
+}
+
+@keyframes containerFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes titleSlideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .e-marambo-hero-text {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: var(--dark-orange);
+    margin-bottom: 1.5rem;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: positionSlideIn 1.5s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+.e-marambo-hero-desc {
+    font-size: 1.2rem;
+    color: var(--light-orange);
+    margin-bottom: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation-iteration-count: infinite;
+}
+
+.e-marambo-loader-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid var(--secondary-orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 100px;
+    animation: zoomInOut 2s infinite ease-in-out;
+    cursor: pointer;
+    animation-delay: 17.5s;
+    opacity: 0;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid var(--secondary-orange);
+    position: absolute;
+    top: 35%;
+}
+
+.e-marambo-hero-buttons {
+    margin-top: 2rem;
 }
 
 .e-marambo-actions {
-    display: inline-block;
-    margin-inline-end: 1rem;
-    color: var(--light-blue);
     padding: 12px 30px;
-    line-height: 1.1;
     font-size: 1.2rem;
-    font-weight: 400;
-    border-radius: 20px;
+    font-weight: 500;
+    color: var(--light-blue);
+    border-radius: 25px;
+    background: linear-gradient(to right, var(--secondary-orange), var(--primary-blue));
+    border: none;
     cursor: pointer;
-    border: 1px solid var(--text-color);
-    text-transform: uppercase;
-    background: linear-gradient(to left, var(--dark-blue) 10%, var(--secondary-orange) 100%);
-    transition: all 0.55s ease;
-    align-self: flex-start;
+    transition: all 0.3s ease-in-out;
+    margin: 0 10px;
 }
 
 .e-marambo-actions:hover {
-    background: transparent;
-    border: 1px solid var(--light-blue);
-    transform: translate(10px);
-    text-decoration: none;
+    background: var(--dark-orange);
+    color: var(--white);
+    transform: scale(1.1);
 }
 
-.e-marambo-flex-container {
-    display: flex;
-    flex-direction: column;
+.e-marambo-hero-buttons {
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkCaret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--light-orange);
+    }
+}
+
+@keyframes positionSlideIn {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomInOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

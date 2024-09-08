@@ -1,16 +1,22 @@
 <div class="e-marambo-main-container">
     <div class="e-marambo-hero-container">
-        <div class="e-marambo-hero-title">
-            Emillio Itai Marambo.
-        </div>
+        <h1 class="e-marambo-hero-title">
+            Emillio Itai Marambo
+        </h1>
 
-        <div class="e-marambo-hero-text">
-            Full Stack Software Developer with 4+ experience.
-        </div>
+        <h2 class="e-marambo-hero-text">
+            Full Stack Software Developer
+        </h2>
 
-        <div class="e-marambo-hero-buttons">
+        <p class="e-marambo-hero-desc">{{typedText}}</p>
+
+        <div class="e-marambo-hero-buttons" *ngIf="showButtons">
             <button class="e-marambo-actions" type="button" (click)="viewResume()">View Resume</button>
             <button class="e-marambo-actions" type="button" (click)="downloadResume()">Download Resume</button>
         </div>
+    </div>
+
+    <div class="e-marambo-loader-circle">
+        <div class="arrow"></div>
     </div>
 </div>
