@@ -3,7 +3,7 @@ name: Developer Profile Production Pipeline
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   deploy:
