@@ -9,9 +9,8 @@ import 'intersection-observer';
 })
 export class MainHomeComponent implements OnInit {
 
-  fullText = "5 years of turning complex challenges into seamless, cutting-edge solutions—one secure line of code at a time.";
+  fullText = "5 years of innovative problem-solving";
   typedText = "";
-  showButtons = false;
   typingSpeed = 100;
 
   coreSkills = {
@@ -41,7 +40,7 @@ export class MainHomeComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.startTyping();
-    }, 4500);
+    }, 3500);
 
     setTimeout(() => {
       // Core Tools
@@ -62,14 +61,14 @@ export class MainHomeComponent implements OnInit {
       this.devopsSkills.Git = 85;
       this.devopsSkills.Networking = 75;
       this.devopsSkills.Leadership = 80;
-    }, 5000); 
+    }, 2000); 
     this.initIntersectionObserver();
   }
   
   initIntersectionObserver() {
     const options = {
       root: null,
-      rootMargin: '20px',
+      rootMargin: '-30px 0px -30px 0px',
       threshold: 0.2
     };
 
@@ -97,15 +96,22 @@ export class MainHomeComponent implements OnInit {
         i++;
       } else {
         clearInterval(typingInterval);
-        this.showButtons = true;
       }
     }, this.typingSpeed);
   }
 
   viewResume() {
-    this.router.navigate(['/resume']);
+    const resumeUrl = this.router.createUrlTree(['/resume']).toString();
+    window.open(resumeUrl, '_blank');
   }
 
   downloadResume() {
+    const fileUrl = 'assets/docs/Emillio_Resume.pdf'; 
+  const a = document.createElement('a');
+  a.href = fileUrl;
+  a.download = 'Emillio_Resume.pdf';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
   }
 }

@@ -1,0 +1,32 @@
+:root {
+    --primary-blue: #007BFF;
+    --secondary-orange: #FFA500;
+    --dark-blue: #0c427c;
+    --light-blue: #e7f1ff;
+    --light-orange: #ffe5b4;
+    --dark-orange: #cc8400;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+body {
+    color: var(--text-color);
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

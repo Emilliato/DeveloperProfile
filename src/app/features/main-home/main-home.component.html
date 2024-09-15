@@ -1,25 +1,25 @@
-<div class="e-marambo-main-container animated-element" id="header-section">
-    <div class="e-marambo-hero-container">
+<div class="e-marambo-main-container " id="header-section">
+    <div class="e-marambo-hero-container animated-element">
         <h1 class="e-marambo-hero-title">Emillio Itai Marambo</h1>
         <h2 class="e-marambo-hero-text">Full Stack Software Developer</h2>
         <p class="e-marambo-hero-desc">{{typedText}}</p>
 
-        <div class="e-marambo-hero-buttons" *ngIf="showButtons">
+        <div class="e-marambo-hero-buttons">
             <button class="e-marambo-actions" type="button" (click)="viewResume()">View Resume</button>
             <button class="e-marambo-actions" type="button" (click)="downloadResume()">Download Resume</button>
         </div>
+        <div class="e-marambo-loader-circle">
+            <div class="arrow"></div>
+        </div>
     </div>
 
-    <div class="e-marambo-loader-circle">
-        <div class="arrow"></div>
-    </div>
+
 </div>
 
 <div class="skills-section animated-element" id="skills-section">
     <h2 class="skills-title">My Skills</h2>
     <div class="skills-grid">
-        <!-- Core Tools -->
-        <div class="skills-box">
+        <div class="skills-box animated-element">
             <h3 class="skills-heading">Core Tools</h3>
             <ul>
                 <li><strong>C#</strong> & <strong>MS SQL</strong>
@@ -45,8 +45,7 @@
             </ul>
         </div>
 
-        <!-- Scripting & Markup -->
-        <div class="skills-box">
+        <div class="skills-box animated-element">
             <h3 class="skills-heading">Scripting & Markup</h3>
             <ul>
                 <li><strong>jQuery</strong> & <strong>Angular</strong>
@@ -71,9 +70,7 @@
                 </li>
             </ul>
         </div>
-
-        <!-- DevOps & Others -->
-        <div class="skills-box center-box .animated-element">
+        <div class="skills-box center-box animated-element">
             <h3 class="skills-heading">DevOps & Others</h3>
             <ul>
                 <li><strong>Docker</strong> & <strong>Kubernetes</strong>

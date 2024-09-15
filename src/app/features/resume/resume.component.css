@@ -66,7 +66,7 @@
 }
 
 .e-marambo-personal-details-desc {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -177,7 +177,7 @@ header {
 }
 
 .role h4 {
-    font-size: 18px;
+    font-size: 1rem;
     color: var(--dark-blue);
     margin-bottom: 10px;
 }
