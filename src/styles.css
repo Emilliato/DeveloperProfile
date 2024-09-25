@@ -2,7 +2,7 @@
 @import url('./assets/css/animations.css');
 
 .e-marambo-main-container {
-    width: 100vw;
+    width: 99.1dvw;
     height: 100vh;
     display: flex;
     flex-direction: column;
