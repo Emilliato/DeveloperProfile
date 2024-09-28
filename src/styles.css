@@ -1,8 +1,7 @@
 @import url('./assets/css/base.css');
 @import url('./assets/css/animations.css');
-
 .e-marambo-main-container {
-    width: 99.1dvw;
+    width: 100dvw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -53,7 +52,6 @@
     white-space: nowrap;
     overflow: hidden;
     animation-iteration-count: infinite;
-
 }
 
 .e-marambo-hero-buttons {
@@ -123,7 +121,10 @@
 
 .skills-title {
     font-size: 2.5rem;
-    color: var(--dark-orange);
+    color: var(--dark-blue);
+    padding: 1rem;
+    text-shadow: 1px 1px 0 var(--light-orange), 2px 2px 0 var(--light-orange), 3px 3px 0 var(--light-orange), 4px 4px 0 var(--light-orange), 5px 5px 0 var(--light-orange);
+    letter-spacing: 0.6rem;
     animation: fadeInDown 1s ease-in-out forwards;
     font-family: "Permanent Marker", system-ui;
     font-weight: 700;
@@ -142,7 +143,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
-    animation:none;
+    animation: none;
 }
 
 .skills-box:nth-child(1) {
@@ -157,6 +158,7 @@
     animation: none;
 }
 
+.project-title,
 .skills-heading {
     font-size: 1.8rem;
     color: var(--dark-blue);
@@ -208,3 +210,113 @@
     font-size: 0.8rem;
     color: var(--white);
 }
+
+.projects-section {
+    padding: 2rem;
+    background-image: linear-gradient(220deg, var(--dark-blue), var(--primary-blue));
+}
+
+.projects-title {
+    color: var(--white);
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1rem;
+    text-shadow: 1px 1px 0 var(--dark-blue), 2px 2px 0 var(--dark-blue), 3px 3px 0 var(--dark-blue), 4px 4px 0 var(--dark-orange), 5px 5px 0 var(--dark-orange);
+    letter-spacing: 0.6rem;
+    font-family: "Permanent Marker", system-ui;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--light-blue);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.project-title {
+    text-align: center;
+}
+
+.project-description {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.project-technologies {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-links {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+}
+
+.project-links>a {
+    color: var(--dark-blue);
+    font-size: 1.3rem;
+}
+
+
+/* Slide in from left animation */
+
+.slide-in-left {
+    transform: translateX(-100px);
+    /* Start off-screen to the left */
+}
+
+
+/* Slide in from right animation */
+
+.slide-in-right {
+    transform: translateX(100px);
+    /* Start off-screen to the right */
+}
+
+
+/* When in-view, bring the element into the viewport */
+
+.project-card.in-view {
+    transform: translateX(0);
+    /* Move it back to the center */
+}
+
+
+/* Apply delays to create a staggered effect */
+
+.project-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.project-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+
+/* Continue for additional cards as needed */

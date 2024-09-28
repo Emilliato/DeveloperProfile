@@ -1,66 +1,67 @@
 /* Base styles for small screens (mobile devices) */
+
 @media (max-width: 600px) {
     .e-marambo-main-container {
         height: 90vh;
     }
-
     .e-marambo-hero-title {
         font-size: 2.5rem;
     }
-
     .e-marambo-hero-text {
         font-size: 1.8rem;
     }
-
     .e-marambo-hero-desc {
         font-size: 1rem;
     }
-
     .skills-box {
         padding: 1rem;
     }
-
     .e-marambo-actions {
         padding: 10px 20px;
         font-size: 1rem;
     }
-
     .skills-title {
         font-size: 2rem;
     }
     .e-marambo-loader-circle,
-    .arrow{
+    .arrow {
         display: none;
     }
 }
 
+
 /* Medium devices (tablets) */
+
 @media (min-width: 600px) and (max-width: 992px) {
     .e-marambo-hero-title {
         font-size: 3rem;
     }
-
     .e-marambo-hero-text {
         font-size: 2rem;
     }
-
     .e-marambo-hero-desc {
         font-size: 1rem;
     }
     .e-marambo-loader-circle,
-    .arrow{
+    .arrow {
         display: none;
     }
-
     .skills-box {
         padding: 1.5rem;
     }
 }
 
+
 /* Large devices (desktops) */
+
 @media (min-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        margin: 2rem 5rem;
+    }
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 2rem;
         margin: 2rem 15rem;
     }
@@ -70,7 +71,7 @@
         width: 60%;
     }
     .e-marambo-loader-circle,
-    .arrow{
+    .arrow {
         display: flex;
     }
 }

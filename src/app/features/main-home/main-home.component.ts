@@ -35,6 +35,26 @@ export class MainHomeComponent implements OnInit {
     Leadership: 0
   };
 
+  projects = [
+    {
+      title: 'BookiT – Driving School Management System',
+      description: 'A web-based application for managing driving school operations, including student records, schedules, and billing.',
+      technologies: ['Angular', 'Firebase', '.NET Core', 'AWS EC2', 'AWS S3 & Cloudfront', 'Github', 'Android Kotlin'],
+      demoLink: 'https://lessons.bookitonline.co.za/about',  // Replace with actual link
+      repoLink: 'https://github.com/your-username/bookit' ,
+      disabled: true
+    },
+    {
+      title: 'Thunderbolts Academy - Handball Club Website',
+      description: 'Developed a website for a Handball club dedicated to supporting marginalized communities through sport. I volunteered to create this as a way of giving back to the community.',
+      technologies: ['ASP.NET Core', 'MS SQL', 'Angular', 'Stripe'],
+      demoLink: 'https://lessons.bookitonline.co.za/about',  // Replace with actual link
+      repoLink: 'https://github.com/your-username/ecommerce',
+      disabled: true
+    },
+    // Add more projects as needed
+  ];
+
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -86,6 +106,16 @@ export class MainHomeComponent implements OnInit {
 
     const elements = document.querySelectorAll('.animated-element');
     elements.forEach(el => observer.observe(el));
+
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach((card, index) => {
+      if (index % 2 === 0) {
+        card.classList.add('slide-in-left');
+      } else {
+        card.classList.add('slide-in-right');
+      }
+      observer.observe(card);
+    });
   }
 
   startTyping() {
