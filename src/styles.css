@@ -211,39 +211,51 @@
     color: var(--white);
 }
 
-.projects-section {
-    padding: 2rem;
+.marambo-projects-container {
     background-image: linear-gradient(220deg, var(--dark-blue), var(--primary-blue));
+    align-items: center;
+    justify-content: center;
+    padding-inline: 4rem;
+}
+
+.marambo-projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.marambo-project-card-grid {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 300px);
 }
 
 .projects-title {
     color: var(--white);
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 1rem;
     text-shadow: 1px 1px 0 var(--dark-blue), 2px 2px 0 var(--dark-blue), 3px 3px 0 var(--dark-blue), 4px 4px 0 var(--dark-orange), 5px 5px 0 var(--dark-orange);
     letter-spacing: 0.6rem;
     font-family: "Permanent Marker", system-ui;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 2rem;
 }
 
 .project-card {
     background-color: var(--light-blue);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    height: 400px;
+    clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    opacity: 0;
+    cursor: grab;
 }
 
 .project-card:hover {
@@ -253,18 +265,22 @@
 
 .project-title {
     text-align: center;
+    font-size: 1.6rem;
+    padding-inline: 1.5rem;
 }
 
 .project-description {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    font-weight: 500;
     margin-bottom: 1rem;
+    padding-inline: 2rem;
 }
 
 .project-technologies {
     text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding-inline: 2rem;
 }
 
 .project-links {
@@ -272,6 +288,7 @@
     display: flex;
     flex-direction: row;
     gap: 10rem;
+    margin-block: 1rem;
 }
 
 .project-links>a {
@@ -279,44 +296,14 @@
     font-size: 1.3rem;
 }
 
-
-/* Slide in from left animation */
-
 .slide-in-left {
     transform: translateX(-100px);
-    /* Start off-screen to the left */
 }
-
-
-/* Slide in from right animation */
 
 .slide-in-right {
     transform: translateX(100px);
-    /* Start off-screen to the right */
 }
-
-
-/* When in-view, bring the element into the viewport */
 
 .project-card.in-view {
     transform: translateX(0);
-    /* Move it back to the center */
 }
-
-
-/* Apply delays to create a staggered effect */
-
-.project-card:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.project-card:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.project-card:nth-child(3) {
-    transition-delay: 0.3s;
-}
-
-
-/* Continue for additional cards as needed */
