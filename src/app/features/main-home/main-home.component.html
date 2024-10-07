@@ -5,15 +5,12 @@
         <p class="e-marambo-hero-desc">{{typedText}}</p>
 
         <div class="e-marambo-hero-buttons">
-            <button class="e-marambo-actions" type="button" (click)="viewResume()">View Resume</button>
-            <button class="e-marambo-actions" type="button" (click)="downloadResume()">Download Resume</button>
+            <button class="e-marambo-actions" type="button" (click)="downloadResume()">Let's Connect – Get My Resume</button>
         </div>
         <div class="e-marambo-loader-circle">
             <div class="arrow"></div>
         </div>
     </div>
-
-
 </div>
 
 <div class="skills-section animated-element" id="skills-section">
@@ -102,10 +99,10 @@
         </div>
     </div>
 </div>
-<div class="marambo-projects-container">
+<div class="marambo-projects-container-desktop">
     <h2 class="projects-title animated-element">My Projects</h2>
     <div class="marambo-projects-grid">
-        <div class="project-card box-vertical-left">
+        <div class="project-card project-card-large box-vertical-left">
             <h3 class="project-title">BookiT <br> Driving School Management System</h3>
             <p class="project-description">A Web and Mobile application for managing Driving School operations</p>
             <p class="project-technologies">
@@ -117,7 +114,7 @@
         </div>
 
         <div class="marambo-project-card-grid">
-            <div class="project-card box-vertical-top">
+            <div class="project-card project-card-large box-vertical-top">
                 <h3 class="project-title">Thunderbolts Academy <br> Handball Club Website</h3>
                 <p class="project-description">Website for a Handball club dedicated to supporting marginalized communities through sport</p>
                 <p class="project-technologies">
@@ -127,7 +124,7 @@
                     <a [href]="'https://thunderboltsacademy.co.za'" target="_blank" class="project-link">Live Demo</a>
                 </div>
             </div>
-            <div class="project-card box-vertical-bottom">
+            <div class="project-card project-card-large box-vertical-bottom">
                 <h3 class="project-title">More On Github</h3>
                 <p class="project-description">Discover more of my projects and contributions on GitHub, where innovation meets code</p>
                 <p class="project-technologies">
@@ -139,7 +136,51 @@
             </div>
         </div>
 
-        <div class="project-card box-vertical-right">
+        <div class="project-card project-card-large box-vertical-right">
+            <h3 class="project-title">Bitcoin Automated Trader</h3>
+            <p class="project-description">Trading Bot that leverages Bitcoin price fluctuations using Luno's web API</p>
+            <p class="project-technologies">
+                <strong>Technologies:</strong> Utilized .NET Core for the backend, hosted the project on an AWS EC2 instance, and used MS SQL as the database.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="marambo-projects-container-mobile">
+    <h2 class="projects-title animated-element">My Projects</h2>
+    <div class="marambo-projects-grid ">
+        <div class="project-card animated-element">
+            <h3 class="project-title">BookiT <br> Driving School Management System</h3>
+            <p class="project-description">A Web and Mobile application for managing Driving School operations</p>
+            <p class="project-technologies">
+                <strong>Technologies:</strong> Angular, .NET Core, Android Kotlin, AWS EC2, AWS S3 & Cloudfront
+            </p>
+            <div class="project-links">
+                <a [href]="'https://lessons.bookitonline.co.za/about'" target="_blank" class="project-link">Live Demo</a>
+            </div>
+        </div>
+        <div class="project-card animated-element">
+            <h3 class="project-title">Thunderbolts Academy <br> Handball Club Website</h3>
+            <p class="project-description">Website for a Handball club dedicated to supporting marginalized communities through sport</p>
+            <p class="project-technologies">
+                <strong>Technologies:</strong> C#, Kotlin, Firebase
+            </p>
+            <div class="project-links">
+                <a [href]="'https://thunderboltsacademy.co.za'" target="_blank" class="project-link">Live Demo</a>
+            </div>
+        </div>
+        <div class="project-card animated-element">
+            <h3 class="project-title">More On Github</h3>
+            <p class="project-description">Discover more of my projects and contributions on GitHub, where innovation meets code</p>
+            <p class="project-technologies">
+                <strong>Technologies:</strong> Python, C#, Java, MSSQL, Angular, .NET Core, Android Kotlin, AWS and more
+            </p>
+            <div class="project-links">
+                <a [href]="'https://github.com/Emilliato'" target="_blank" class="project-link">Repositories</a>
+            </div>
+        </div>
+
+        <div class="project-card animated-element">
             <h3 class="project-title">Bitcoin Automated Trader</h3>
             <p class="project-description">Trading Bot that leverages Bitcoin price fluctuations using Luno's web API</p>
             <p class="project-technologies">

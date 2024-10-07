@@ -87,7 +87,7 @@ export class MainHomeComponent implements OnInit {
     const elements = document.querySelectorAll('.animated-element');
     elements.forEach(el => observer.observe(el));
 
-    const projectCards = document.querySelectorAll('.project-card');
+    const projectCards = document.querySelectorAll('.project-card-large');
     projectCards.forEach((card, index) => {
       switch(index){
          case 1:

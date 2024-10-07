@@ -1,7 +1,7 @@
 .animated-element {
     opacity: 0;
     transform: scale(0.9);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 1s ease-out, transform 01s ease-out;
 }
 
 .animated-element.in-view {
@@ -148,7 +148,7 @@
 
 @keyframes positionSlideIn {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(-300%);
         opacity: 0;
     }
     100% {
